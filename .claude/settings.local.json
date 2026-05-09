@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:bookstack.bassopaolo.com)",
+      "Bash(poetry --version)",
+      "Bash(ruff --version)",
+      "Bash(mypy --version)",
+      "Bash(poetry run *)",
+      "Bash(grep -v \":0$\")",
+      "Bash(curl -sI \"https://web.archive.org/web/2023*/https://bookstack.bassopaolo.com/uploads/images/drawio/2022-03/rmqTYiNNy6ieopvL-drawing-1-1648319187.png\")",
+      "Bash(curl -sI \"https://web.archive.org/web/2023/https://bookstack.bassopaolo.com/uploads/images/drawio/2022-03/rmqTYiNNy6ieopvL-drawing-1-1648319187.png\")",
+      "Read(//Users/pbas/Developing/**)",
+      "Bash(zip -r -q -e -P prosciutto polimi-cs-notes.zip polimi-cs-notes -x polimi-cs-notes/.env -x 'polimi-cs-notes/.venv/*' -x 'polimi-cs-notes/venv/*' -x 'polimi-cs-notes/.mypy_cache/*' -x 'polimi-cs-notes/.ruff_cache/*' -x 'polimi-cs-notes/.pytest_cache/*' -x 'polimi-cs-notes/.idea/*' -x 'polimi-cs-notes/.vscode/*' -x '*/__pycache__/*' -x '*.pyc' -x '*/.DS_Store' -x .DS_Store)"
+    ]
+  }
+}

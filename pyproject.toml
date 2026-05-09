@@ -1,0 +1,51 @@
+[project]
+name = "polimi-cs-notes"
+version = "0.1.0"
+description = "Export a BookStack instance to markdown and build a static site for GitHub Pages."
+authors = [{ name = "pbas" }]
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "requests (>=2.31)",
+    "python-dotenv (>=1.0)",
+    "markdown (>=3.6)",
+    "python-frontmatter (>=1.1)",
+    "pygments (>=2.17)",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.14"
+mypy = "^1.18"
+types-requests = "*"
+types-markdown = "*"
+types-pygments = "*"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific
+]
+
+[tool.ruff.lint.per-file-ignores]
+"build.py" = ["E501"]  # long inline HTML/CSS strings
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+files = ["export.py", "build.py"]
